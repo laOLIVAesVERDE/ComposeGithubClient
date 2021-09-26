@@ -1,0 +1,20 @@
+package com.example.composegithubclient.model.remote_data_source
+
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import kotlinx.serialization.ExperimentalSerializationApi
+import javax.inject.Singleton
+
+@Module
+@InstallIn(SingletonComponent::class)
+class ApiClientModule {
+    @ExperimentalSerializationApi
+    @Provides
+    @Singleton
+    fun provideApiClient(apiClientProvider: ApiClientProvider) : ApiClient {
+        // 引数がない場合 : return ApplicationProvider().provide()
+        return apiClientProvider.provide()
+    }
+}
