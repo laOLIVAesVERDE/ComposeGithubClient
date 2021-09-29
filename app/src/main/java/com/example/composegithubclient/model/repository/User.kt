@@ -1,6 +1,8 @@
 package com.example.composegithubclient.model.repository
 
-
+/**
+ * repositoryを使う層にRemoteDataSourceを意識させない
+ */
 data class User(
     val userId: UserId,
     val name: String,
