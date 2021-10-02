@@ -1,4 +1,4 @@
-package com.example.composegithubclient
+package com.example.composegithubclient.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
