@@ -10,6 +10,7 @@ fun UserDetailView(user: User) {
     Column {
         Text(text = user.userId.value.toString())
         Text(text = user.name)
-        
+        Text(text = user.avatarImage.url.value)
+        Text(text = user.blogUrl.value)
     }
 }
