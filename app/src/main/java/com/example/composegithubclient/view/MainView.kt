@@ -12,6 +12,9 @@ fun MainView(mainViewModel: MainViewModel) {
     val uiState : MainViewModel.UiState by mainViewModel.uiState
 
     Column(Modifier.fillMaxWidth()) {
-
+        SearchView(
+            searchQuery = mainViewModel.searchQuery,
+            onSearchButtonTapped = mainViewModel::onSearchTapped
+        )
     }
 }
