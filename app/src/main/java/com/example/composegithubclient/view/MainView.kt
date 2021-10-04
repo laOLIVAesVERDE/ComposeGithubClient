@@ -18,6 +18,7 @@ fun MainView(mainViewModel: MainViewModel) {
             searchQuery = mainViewModel.searchQuery,
             onSearchButtonTapped = mainViewModel::onSearchTapped
         )
+        // stateによって切り替える
         when (uiState) {
             is MainViewModel.UiState.Initial -> InitialView()
             is MainViewModel.UiState.Loading -> LoadingView()
