@@ -28,6 +28,7 @@ fun MainView(mainViewModel: MainViewModel) {
     }
 }
 
+// Userを取得する
 private fun MainViewModel.UiState.requireUser() : User {
     if (this !is MainViewModel.UiState.Success) throw IllegalStateException("user is not loaded.")
     return user
